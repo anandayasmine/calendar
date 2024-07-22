@@ -1,0 +1,12 @@
+.element-link-wrapper {
+
+  &.link-on {
+    color: $color-primary;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-secondary;
+
+    }
+  }
+}

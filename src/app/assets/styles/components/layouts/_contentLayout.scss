@@ -1,0 +1,48 @@
+.content-layout {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	padding: 1rem;
+	box-sizing: border-box;
+	align-content: start;
+	gap: 1rem;
+	grid-template-rows: auto 1fr;
+
+	&-header {
+		height: fit-content;
+		align-items: center;
+
+		&-title {
+			&.MuiTypography-root {
+				font-weight: 700;
+			}
+		}
+
+	}
+	&-main{
+		&>main {
+			height: 100%;
+			margin-bottom: 1.5rem;
+		}
+	}
+	
+	&.full {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	&.light-grey {
+		background-color: $color-grey;
+	}
+
+	&.header-disabled {
+		grid-template-rows: 1fr;
+
+		.content-layout-header {}
+	}
+
+}

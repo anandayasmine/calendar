@@ -1,0 +1,23 @@
+.template-global-table-editor{
+  @include scroll-custom;
+
+  &-header{
+    gap: 1rem;
+  }
+  &-title{
+    .MuiTypography-root{
+      font-weight: 600;
+
+    }
+  }
+  &-content{
+    display: grid;
+    overflow: auto;
+    @include scroll-custom;
+  }
+  &-card-overview{
+    width: fit-content;
+    max-width: 300px;
+    @include card;
+  }
+}

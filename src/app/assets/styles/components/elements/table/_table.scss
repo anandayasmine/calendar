@@ -1,0 +1,135 @@
+.element-table {
+  overflow: auto;
+  @include scroll-custom;
+
+  &-row {
+    &-bg-color {
+      &-red {
+        background-color: $color-red-light-3;
+      }
+    }
+
+  }
+
+  .MuiDataGrid {
+    &-withBorderColor {
+      border-color: $color-border;
+
+    }
+
+    &-root {
+      border-color: $color-border;
+      border-radius: 0.55rem;
+      overflow: auto;
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+
+    &-row {
+      position: relative;
+      border-color: $color-border;
+      min-height: 56px !important;
+
+      td,
+      th,
+      tr {
+        border-color: $color-border !important;
+      }
+
+    }
+
+    &-virtualScroller {
+      @include scroll-custom(blue, 0.7rem);
+    }
+
+    &-footerContainer {
+      min-height: unset;
+    }
+
+    &-columnHeader {
+      &Title {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    &-cellContent {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $color-neutral-900;
+    }
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border: unset;
+  }
+
+  .elements-chip-stack {
+    overflow: auto;
+    padding-bottom: 0.1rem;
+    @include scroll-custom;
+  }
+
+
+  &.use-toolbar {
+
+    .MuiDataGrid {
+      &-root {
+        grid-template-rows: auto 1fr auto;
+
+      }
+      &-root {
+      }
+      &-columnHeaders {
+        border-top: 1px solid $color-border;
+      }
+    }
+  }
+
+  &.use-bulk-edit {}
+
+  &.disable-action {
+    &-edit {}
+  }
+
+  &.show-editable-cell {
+
+    &:not(.disable-action-edit) {
+
+      .module-table {
+        &-cell {
+          &-editable {
+            cursor: pointer;
+            display: grid;
+            width: 100%;
+            height: 90%;
+            align-items: center;
+
+            padding: 0rem 1rem;
+            background-color: white;
+            @include card(0.5rem);
+          }
+        }
+
+        &-row {
+          &-edited {
+            background-color: antiquewhite;
+          }
+        }
+      }
+    }
+
+  }
+
+  &-action-cell {}
+
+  &-tr-child {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    box-sizing: border-box;
+    background-color: $color-grey;
+  }
+}

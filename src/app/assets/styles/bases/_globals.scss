@@ -1,0 +1,52 @@
+:root {
+
+  font-size: 90%;
+  font-family: $font-primary;
+  color: $color-black;
+
+  body {
+    margin: 0;
+
+    p {
+      font-family: $font-primary !important;
+
+    }
+  }
+
+  main {
+    overflow-x: hidden;
+
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  * {
+    font-family: $font-primary !important;
+  }
+
+}
+
+body,
+html {
+  @include scroll-custom;
+}
+
+@include minmax($breakpoint-sm, $breakpoint-md) {
+  :root {
+    font-size: 90%;
+  }
+}
+
+@include minmax($breakpoint-ts, $breakpoint-sm) {
+  :root {
+    font-size: 80%;
+  }
+}
+
+@include max($breakpoint-ts) {
+  :root {
+    font-size: 70%;
+  }
+}

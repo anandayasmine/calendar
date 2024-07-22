@@ -1,0 +1,15 @@
+#__next-build-watcher{
+  display: none !important;
+}
+#nprogress{
+  .bar{
+    background: $color-primary !important;
+    height: 5px !important;
+  }
+  .peg{
+    box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary !important;
+  }
+  .spinner{
+    display: none !important;
+  }
+} 

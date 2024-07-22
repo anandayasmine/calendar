@@ -1,0 +1,36 @@
+.template-login-page{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 999999999;
+  background-color: white;
+  margin: unset;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  &-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+  }
+
+  &-form{
+    .element-form-generator{
+      &-block-form{
+        max-height: 80vh;
+      }
+    }
+    .MuiPaper-root{
+      padding: 2rem;
+
+    }
+  }
+}
